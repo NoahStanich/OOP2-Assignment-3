@@ -5,6 +5,7 @@ namespace LinkedListTest
     public class LinkedListTest
     {
         private SLL list;
+        private Node head;
 
         [SetUp]
         public void SetUp()
@@ -65,15 +66,6 @@ namespace LinkedListTest
             list.Delete(0);
             Assert.That(list.Retrieve(0), Is.EqualTo("B"));
         }
-
-        //[Test]
-        //public void TestSerialization()
-        //{
-        //    list.Append("A");
-        //    byte[] data = list.Serialize();
-        //    SLL deserializedList = SLL.Deserialize(data);
-        //    Assert.AreEqual("A", deserializedList.GetAt(0));
-        //}
     }
 
 }
