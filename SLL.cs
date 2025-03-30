@@ -116,6 +116,22 @@ public class SLL : ILinkedListADT
 
     public bool Contains(object data) => IndexOf(data) != -1;
 
+    public Node ReverseList(Node head)
+    {
+        Node current = head;
+        Node previous = null;
+        Node next;
+    
+        while (current != null)
+        {
+            next = current.Next;
+            current.Next = previous;
+            previous = current;
+            current = next;
+        }
+        return previous;
+    }
+
     // Serialization
     public byte[] Serialize()
     {
